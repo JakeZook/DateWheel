@@ -1,0 +1,98 @@
+/* Mobile responsive layout */
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #60a5fa 0%, #7c83fd 45%, #f472b6 100%);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#root {
+	width: 100%;
+	max-width: 1126px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* Main page */
+
+.container {
+	width: 100%;
+	text-align: center;
+}
+
+h1 {
+	font-size: 22px;
+	margin: 20px 0;
+}
+
+/* Wheel wrapper */
+
+.wheel-container {
+	position: relative;
+	width: min(90vw, 520px);
+	height: min(90vw, 520px);
+	margin: 20px auto;
+}
+
+/* SVG wheel */
+
+.wheel {
+	width: 100%;
+	height: 100%;
+	transition: transform 5s cubic-bezier(0.17, 0.67, 0.19, 0.99);
+}
+
+/* Pointer */
+
+.pointer {
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-top: 28px solid #222;
+}
+
+/* Buttons */
+
+button {
+	width: min(90%, 250px);
+	padding: 12px 20px;
+	margin: 10px;
+	font-size: 1rem;
+
+	border: none;
+	border-radius: 999px;
+
+	cursor: pointer;
+}
+
+/* Winner text */
+
+h2 {
+	font-size: clamp(1.2rem, 5vw, 2rem);
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+	#root {
+		padding: 10px;
+	}
+
+	.wheel-container {
+		width: 95vw;
+		height: 95vw;
+	}
+
+	button {
+		font-size: 16px;
+	}
+}
