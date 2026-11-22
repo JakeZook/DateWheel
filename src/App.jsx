@@ -34,6 +34,31 @@ const dateOptions = {
 		"Royal Gorge",
 		"Museum",
 	],
+	movies: [
+		"Mandy",
+		"star Wars",
+		"Dune",
+		"Paranorman",
+		"Kubo and the six strings",
+		"But I'm a cheerleader",
+		"Dog soldiers",
+		"Ghostbusters",
+		"Monster Squad",
+		"Train to Busan",
+		"Indiana Jones",
+		"The Mummy",
+		"Ugly Stepsister",
+		"Videodrome",
+		"Mad God",
+		"Missing Link",
+		"Interview With a Vampire",
+		"Blackberry",
+		"The Dirties",
+		"The Blob",
+		"Basket Case",
+		"1408",
+		"What We Do in The Shadows",
+	],
 };
 
 const colors = [
@@ -95,6 +120,7 @@ export default function App() {
 				evening: [],
 				chill: [],
 				allDay: [],
+				movies: [],
 			}
 		);
 	};
@@ -183,6 +209,8 @@ export default function App() {
 				<button onClick={() => chooseCategory("allDay")}>
 					🗓️ All Day Date
 				</button>
+
+				<button onClick={() => chooseCategory("movies")}>🎞️ Movies</button>
 			</div>
 		);
 	}
@@ -196,7 +224,9 @@ export default function App() {
 					? "🌙 Evening"
 					: category === "chill"
 						? "☀️ Chill"
-						: "🗓️ All Day"}
+						: category === "allDay"
+							? "🗓️ All Day"
+							: "Movies"}
 			</h2>
 
 			<div className="wheel-container">
