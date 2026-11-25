@@ -58,6 +58,7 @@ const dateOptions = {
 		"Basket Case",
 		"1408",
 		"What We Do in The Shadows",
+		"Love and Cameras in America",
 	],
 };
 
